@@ -12,7 +12,9 @@ likely when the memory operated on, is not properly aligned on a long word bound
 The output of `bugRepro()` in [`native-lib.c`](jni/native-lib.c) varies depending on architecture the binary is running on.
 
 The output should be:  10656741657
+
 Output on x86 is:      10656741657
+
 But, if you run `armeabi` binary on 64 bit processor, without optimizations, the output is: 10656741657
 
 But, if you run `armeabi` binary on 64 bit processor, the output is: 35173553994009
