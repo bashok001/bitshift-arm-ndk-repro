@@ -19,7 +19,7 @@ int main(int argc, char const *argv[]) {
     a.state = -10;
     printf("Initial State: %lld\n", a.state);
 
-    bugRepro(&a);
+    bugRepro((oops *)&a);
     printf("TEST State: %lld\n", a.state);
     return 0;
 }

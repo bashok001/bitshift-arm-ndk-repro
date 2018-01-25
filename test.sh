@@ -12,9 +12,9 @@ echo "Waiting to connect to a device"
 adb wait-for-device
 
 ${ANDROID_NDK}/ndk-build -B -j8 &> /dev/null
-adb shell rm -rf $TEST_PATH
-adb shell mkdir -p $TEST_PATH
-adb push libs/armeabi/* $TEST_PATH
+adb shell rm -rf $TEST_PATH &> /dev/null
+adb shell mkdir -p $TEST_PATH &> /dev/null
+adb push libs/armeabi/* $TEST_PATH &> /dev/null
 
 echo "============= Results with optimizations ==============="
 adb shell "LD_LIBRARY_PATH=$TEST_PATH $TEST_PATH/native-lib $@"
@@ -31,9 +31,9 @@ echo "*******************************************************************"
 mv jni/Application.mk jni/Application.backup.mk
 mv jni/Application.debug.mk jni/Application.mk
 ${ANDROID_NDK}/ndk-build -B -j8 &> /dev/null
-adb shell rm -rf $TEST_PATH
-adb shell mkdir -p $TEST_PATH
-adb push libs/armeabi/* $TEST_PATH
+adb shell rm -rf $TEST_PATH &> /dev/null
+adb shell mkdir -p $TEST_PATH &> /dev/null
+adb push libs/armeabi/* $TEST_PATH &> /dev/null
 
 echo "============= Results without optimizations ============"
 adb shell "LD_LIBRARY_PATH=$TEST_PATH $TEST_PATH/native-lib $@"
