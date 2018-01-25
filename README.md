@@ -20,5 +20,5 @@ Output on `armeabi` binary on 64 bit processor, without optimizations, is: 10656
 But if you run `armeabi` binary on 64 bit processor, with optimizations, the output is: 35173553994009
 
 ### Notes:
-* If you remove `volatile` declaration on `oops a` from native-lib.c#L17, then the output on `armeabi` binary matches the expected.
-* If you add `volatile` declaration to `long long state` from native-lib.c#L8, then the output matches the expected.
+* If you remove `volatile` declaration on `oops a` from [`native-lib.c`](jni/native-lib.c#L17), then the output on `armeabi` binary matches the expected.
+* If you add `volatile` declaration to `long long state` from [`native-lib.c`](jni/native-lib.c#L8), then the output matches the expected.
