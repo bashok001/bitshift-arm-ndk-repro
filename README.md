@@ -15,9 +15,9 @@ The output should be:  10656741657
 
 Output on x86 is:      10656741657
 
-But, if you run `armeabi` binary on 64 bit processor, without optimizations, the output is: 10656741657
+Output on `armeabi` binary on 64 bit processor, without optimizations, is: 10656741657
 
-But, if you run `armeabi` binary on 64 bit processor, with optimizations, the output is: 35173553994009
+But if you run `armeabi` binary on 64 bit processor, with optimizations, the output is: 35173553994009
 
 ### Notes:
 * If you remove `volatile` declaration on `oops a` from native-lib.c#L17, then the output on `armeabi` binary matches the expected.
